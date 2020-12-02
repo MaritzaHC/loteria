@@ -41,6 +41,7 @@
     <Folder Include="loteria\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="loteria\templates\.editorconfig" />
     <Content Include="requirements.txt" />
     <Content Include="loteria\static\content\bootstrap.css" />
     <Content Include="loteria\static\content\bootstrap.min.css" />
