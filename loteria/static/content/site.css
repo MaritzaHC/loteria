@@ -40,3 +40,10 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+.letramenu {
+    color: #FFFFFF;
+}
+.letramenu:hover{
+    font-weight: bold;
+}

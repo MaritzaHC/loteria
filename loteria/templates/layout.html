@@ -7,10 +7,11 @@
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    
 </head>
 
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div style="background-color: #58617e;" class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -18,19 +19,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand">LOTERIA</a>
+                <a href="/" class="navbar-brand letramenu">LOTERIA</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('home') }}">Inicio</a></li>
-                    <li><a href="{{ url_for('about') }}">Sorteos</a></li>
-                    <li><a href="{{ url_for('contact') }}">Ventas</a></li>
+                    <li><a class="letramenu" href="{{ url_for('home') }}">Inicio</a></li>
+                    <li><a class="letramenu" href="{{ url_for('sorteos') }}"> Tipos de Sorteos</a></li>
+                    <li><a class="letramenu" href="{{ url_for('ventas') }}">Ventas</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="container body-content">
+    <div style="background-color: #9BC4C1; class="container body-content">
         {% block content %}{% endblock %}
         <hr />
         <footer>

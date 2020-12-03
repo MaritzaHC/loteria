@@ -34,6 +34,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="loteria\" />
+    <Folder Include="loteria\imagenes\" />
+    <Folder Include="loteria\imagenes\carousel\" />
     <Folder Include="loteria\static\" />
     <Folder Include="loteria\static\content\" />
     <Folder Include="loteria\static\fonts\" />
@@ -41,7 +43,9 @@
     <Folder Include="loteria\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="loteria\templates\.editorconfig" />
+    <Content Include="loteria\imagenes\carousel\b1.jpg" />
+    <Content Include="loteria\imagenes\carousel\b2.jpg" />
+    <Content Include="loteria\imagenes\carousel\b3.jpg" />
     <Content Include="requirements.txt" />
     <Content Include="loteria\static\content\bootstrap.css" />
     <Content Include="loteria\static\content\bootstrap.min.css" />
@@ -65,8 +69,8 @@
     <Content Include="loteria\static\scripts\respond.js" />
     <Content Include="loteria\static\scripts\respond.min.js" />
     <Content Include="loteria\static\scripts\_references.js" />
-    <Content Include="loteria\templates\about.html" />
-    <Content Include="loteria\templates\contact.html" />
+    <Content Include="loteria\templates\ventas.html" />
+    <Content Include="loteria\templates\sorteos.html" />
     <Content Include="loteria\templates\index.html" />
     <Content Include="loteria\templates\layout.html" />
   </ItemGroup>

@@ -16,22 +16,22 @@ def home():
         year=datetime.now().year,
     )
 
-@app.route('/contact')
-def contact():
+@app.route('/sorteos')
+def sorteos():
     """Renders the contact page."""
     return render_template(
-        'contact.html',
-        title='Contact',
+        'sorteos.html',
+        title='Ventas',
         year=datetime.now().year,
-        message='Your contact page.'
+       
     )
 
-@app.route('/about')
-def about():
+@app.route('/ventas')
+def ventas():
     """Renders the about page."""
     return render_template(
-        'about.html',
-        title='About',
+        'ventas.html',
+        title='Tipos de sorteo',
         year=datetime.now().year,
         message='Your application description page.'
     )
