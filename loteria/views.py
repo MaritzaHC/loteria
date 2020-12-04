@@ -33,20 +33,23 @@ def sorteos():
        
     )
 
-@app.route('/ventas',methods=['POST'])
+@app.route('/ventas')
 def ventas():
     """Renders the about page."""
     return render_template(
         'ventas.html',
-        title='Tipos de sorteo',
+        title='Ventas',
         year=datetime.now().year,
         message='Your application description page.'
     )
 @app.route('/junto',methods=['POST'])
 def junto():
-     if request.method == 'POST':
-            sorteos = request.form['sorteos']
-            fecha = request.form['fecha']
-            print(sorteos)
-            print(venta)
-            return "recivido"
+    if request.method == 'POST':
+         sorteos = request.form['sorteo']
+         fecha = request.form['fecha']
+         cur= mysql.connection.cursor()
+         cur.execute('INSERT INTO venta (sorteos,fecha) VALUES(%s,%s)',
+         (sorteos,fecha))
+         mysql.connection.commit()
+         flash('Contact Added successfully')
+         return redirect(url_for('ventas'))

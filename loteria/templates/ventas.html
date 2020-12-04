@@ -1,23 +1,38 @@
 {% extends "layout.html" %}
 
 {% block content %}
+{% with messages = get_flashed_messages() %}
+
+{%if messages %}
+{%for message in messages%}
+
+<p>{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
 <br>
 <br>
-<div class="input-group /junto" method='POST'>
-    <label for="sorteos"><b>Tipos de Sorteos</b></label>
+<form id="sorteos" action="/junto" method="POST">
+    <div class="input-group">
+        <label for="sorteo"><b>Tipos de Sorteos</b></label>
+        <br>
+        <select class="custom-select" name="sorteo" id="sorteo">
+            <option value="" selected>Escoger...</option>
+            <option value="1">Tris Medio D&iacute;a</option>
+            <option value="2">Chispazo</option>
+            <option value="3">Melate Revancha</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <label for="fecha"><b>Fecha de la venta</b></label>
+        <input class="form-control" name="fecha" id="fecha" type="date">
+    </div>
     <br>
-    <select class="custom-select" id="inputGroupSelect02">
-        <option selected>Escoger...</option>
-        <option value="1">Tris Medio D&iacute;a</option>
-        <option value="2">Chispazo</option>
-        <option value="3">Melate Revancha</option>
-    </select>
-</div>
-<div class="input-group">
-    <label for="fecha"><b>Fecha de la venta</b></label>
-    <input class="form-control" id="fecha" type="date">
-</div>
-<br>
+    <button type="submit">
+        guardar
+    </button>
+</form>
 <table style=" background-color: #FFFFFF;" class="table table-bordered">
     <thead style=" background-color: #DDA060;" class="thead-dark">
 
