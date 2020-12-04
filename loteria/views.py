@@ -13,6 +13,9 @@ app.config['MYSQL_PASSWORD'] ='h4mildad'
 app.config['MYSQL_DB'] ='loteria'
 mysql = MySQL(app)
 
+
+app.secret_key = 'mysecretkey'
+
 @app.route('/')
 @app.route('/home')
 def home():
@@ -36,9 +39,13 @@ def sorteos():
 @app.route('/ventas')
 def ventas():
     """Renders the about page."""
+    cur = mysql.connection.cursor()
+    cur.execute('SELECT * FROM venta')
+    data = cur.fetchall()
     return render_template(
         'ventas.html',
         title='Ventas',
+        venta = data,
         year=datetime.now().year,
         message='Your application description page.'
     )

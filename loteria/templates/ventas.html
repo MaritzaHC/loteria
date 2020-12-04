@@ -19,11 +19,12 @@
         <br>
         <select class="custom-select" name="sorteo" id="sorteo">
             <option value="" selected>Escoger...</option>
-            <option value="1">Tris Medio D&iacute;a</option>
-            <option value="2">Chispazo</option>
-            <option value="3">Melate Revancha</option>
+            <option value="Tris Medio Dia">Tris Medio D&iacute;a</option>
+            <option value="Chispazo">Chispazo</option>
+            <option value="Melate Revancha">Melate Revancha</option>
         </select>
     </div>
+    <br>
     <div class="input-group">
         <label for="fecha"><b>Fecha de la venta</b></label>
         <input class="form-control" name="fecha" id="fecha" type="date">
@@ -33,35 +34,30 @@
         guardar
     </button>
 </form>
+<br>
 <table style=" background-color: #FFFFFF;" class="table table-bordered">
-    <thead style=" background-color: #DDA060;" class="thead-dark">
+    <thead style=" background-color: #DDA050;" class="thead-dark">
 
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Tipo de sorteo</th>
-            <th scope="col">fecha</th>
-            <th scope="col">venta</th>
+            <th>numero</th>
+            <th>Tipo de sorteo</th>
+            <th>fecha</th>
+            <th>venta</th>
         </tr>
     </thead>
     <tbody>
+
+        {%for contactos in venta %}
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>{{contactos.0}} </td>
+            <td>{{contactos.1}} </td>
+            <td>{{contactos.2}} </td>
+            <td>{{contactos.3}} </td>
         </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-        </tr>
+
+       
+        {%endfor%}
+
     </tbody>
 </table>
 {% endblock %}
