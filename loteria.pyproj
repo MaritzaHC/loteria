@@ -34,8 +34,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="loteria\" />
-    <Folder Include="loteria\imagenes\" />
-    <Folder Include="loteria\imagenes\carousel\" />
+    <Folder Include="loteria\static\imagenes\" />
+    <Folder Include="loteria\static\imagenes\carousel\" />
     <Folder Include="loteria\static\" />
     <Folder Include="loteria\static\content\" />
     <Folder Include="loteria\static\fonts\" />
@@ -43,9 +43,9 @@
     <Folder Include="loteria\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="loteria\imagenes\carousel\b1.jpg" />
-    <Content Include="loteria\imagenes\carousel\b2.jpg" />
-    <Content Include="loteria\imagenes\carousel\b3.jpg" />
+    <Content Include="loteria\static\imagenes\carousel\b1.jpg" />
+    <Content Include="loteria\static\imagenes\carousel\b2.jpg" />
+    <Content Include="loteria\static\imagenes\carousel\b3.jpg" />
     <Content Include="requirements.txt" />
     <Content Include="loteria\static\content\bootstrap.css" />
     <Content Include="loteria\static\content\bootstrap.min.css" />

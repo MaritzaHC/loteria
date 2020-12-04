@@ -3,8 +3,15 @@ Routes and views for the flask application.
 """
 
 from datetime import datetime
-from flask import render_template
+from flask import render_template, request,redirect,url_for,flash 
 from loteria import app
+from flask_mysqldb import MySQL
+
+app.config['MYSQL_HOST'] ='localhost'
+app.config['MYSQL_USER'] ='root'
+app.config['MYSQL_PASSWORD'] ='h4mildad'
+app.config['MYSQL_DB'] ='loteria'
+mysql = MySQL(app)
 
 @app.route('/')
 @app.route('/home')
@@ -26,7 +33,7 @@ def sorteos():
        
     )
 
-@app.route('/ventas')
+@app.route('/ventas',methods=['POST'])
 def ventas():
     """Renders the about page."""
     return render_template(
@@ -35,3 +42,11 @@ def ventas():
         year=datetime.now().year,
         message='Your application description page.'
     )
+@app.route('/junto',methods=['POST'])
+def junto():
+     if request.method == 'POST':
+            sorteos = request.form['sorteos']
+            fecha = request.form['fecha']
+            print(sorteos)
+            print(venta)
+            return "recivido"
