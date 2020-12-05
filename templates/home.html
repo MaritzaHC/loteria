@@ -1,6 +1,31 @@
-{% extends "layout.html" %} {% block content %}
+{% extends "layout.html" %}
+{% block content %}
 
-<h1>{% block title %} Create a New Post {% endblock %}</h1>
-
-<h2>{{x}}</h2>
-<input type="text" value="{{y}}"> {% endblock %}
+<br>
+<form id="sorteos" action="/junto" method="POST">
+    <div class="input-group">
+        <label for="sorteo"><b>Tipos de Sorteos</b></label>
+        <br>
+        <select class="custom-select" name="sorteo" id="sorteo">
+            <option value="" selected>Escoger...</option>
+            <option value="Tris Medio Dia">Tris Medio D&iacute;a</option>
+            <option value="Chispazo">Chispazo</option>
+            <option value="Melate Revancha">Melate Revancha</option>
+        </select>
+    </div>
+    <br>
+    <div class="input-group">
+        <label for="fecha"><b>Fecha de la venta</b></label>
+        <input class="form-control" name="fecha" id="fecha" type="date">
+    </div>
+    <br>
+    <button type="submit">
+        Buscar
+    </button>
+</form>
+<br>
+<label for="ventareal">Venta real</label>
+    <input type="email" class="form-control" id="ventareal" placeholder="boletos reales vendidos">
+    <label for="ventaestimada">Venta estimada</label>
+    <input type="email" class="form-control" id="ventaestimada" placeholder="boletos estimados a vender">
+{% endblock %}
