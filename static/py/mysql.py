@@ -3,7 +3,7 @@ import MySQLdb
 DB_HOST = 'localhost' 
 DB_USER = 'root' 
 DB_PASS = '' 
-DB_NAME = 'juego' 
+DB_NAME = 'loteria' 
 
 def run_query(query=''): 
     datos = [DB_HOST, DB_USER, DB_PASS, DB_NAME] 
@@ -23,9 +23,9 @@ def run_query(query=''):
 
     return data
 
-query = "SELECT Pregunta FROM preguntas" 
+query = "SELECT * FROM pordia" 
 result = run_query(query) 
-print(result)
+print(type(result))
 
 #para intalar descargra en https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient y poner poner: 
 #pip install mysqlclient-1.4.6-cp39-cp39-win_amd64.whl
