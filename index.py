@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask import request
-
+import numpy as np
+from static.py.predict import Predictor
 app = Flask(__name__)
 
 @app.route('/')
@@ -11,8 +12,10 @@ def home():
 @app.route('/nuevoSorteo', methods = ['POST'])
 def nuevoSorteo():
     data = request.form
-    print(data)
-    cantidad = 50
+    dediez = Predictor(data['sorteo'])
+    #modifigar las fecheas para que lo reciba la funcion
+    cantidad = dediez.predict(test_data)#aqui las fechas
+
     return render_template('home.html',cantidad = cantidad)
 
 if __name__ == '__main__':
