@@ -8,7 +8,18 @@ print("Ya empece")
 print("Iniciando " + str(1))
 redes.append(Predictor(1))
 print("Ya acabé uwu")
-
+print("Iniciando " + str(2))
+redes.append(Predictor(2))
+print("Ya acabé uwu")
+print("Iniciando " + str(3))
+redes.append(Predictor(3))
+print("Ya acabé uwu")
+print("Iniciando " + str(4))
+redes.append(Predictor(4))
+print("Ya acabé uwu")
+print("Iniciando " + str(5))
+redes.append(Predictor(5))
+print("Ya acabé uwu")
 
 
 
@@ -49,7 +60,7 @@ def nuevoSorteo():
 	#cantidad = dediez.predict(test_data)#aqui las fechas
 	cantidad = (redes[index_red].predict(np.array([[dias, mes, dia, precio]])))
 	cantidad = cantidad[0][0]
-	return render_template('home.html',cantidad = cantidad)
+	return render_template('home.html',cantidad = round(cantidad))
 
 if __name__ == '__main__':
 	app.run(debug=True)
