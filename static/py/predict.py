@@ -1,4 +1,4 @@
-from mysql_final import run_query
+from static.py.mysql_final import run_query
 #from tensorflow import keras
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
